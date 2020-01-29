@@ -3,31 +3,59 @@
 html{
 	background-color: #7358C1;
 	font-family: Roboto, sans-serif;
+	height: 100%;
+	position:fixed;
+	width: 100%;
 }
 
 header {
 	margin: 0px;
-	padding: 0px, 5px;
-	text-align: center;
-	display: block;
+	padding: 0px;
+	text-align: center;	
 }
 
 header h1, h4 {
 	color: white;
 }
 
+header h1{
+	font-size: 28px;
+}
+
 main{
 	margin: 0 auto;
 	padding: 0px;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
+    flex-direction: row;
 }
 
 main canvas {
-	position: absolute;
-	padding: 35px, 0px, 35px, 0px;
+	margin-left: 32%;
+	margin-bottom: 100px;
+	border: solid #fff thick;
+
 }
 
-.pontuation {
-	margin-left: 35px;
+main .pontuation {
+	padding-right: 16%;
+	padding-top: 555px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+@media (max-width: 1300px){
+	main{
+		flex-direction: column-reverse;
+		text-align: center;
+	}
+
+	main canvas {
+		padding-left: 0px;
+	}
+
+	main .pontuation {
+		padding-top: 0px;
+		padding-left: 10%; 
+	}
 }

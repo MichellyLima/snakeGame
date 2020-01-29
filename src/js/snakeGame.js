@@ -40,19 +40,6 @@
                 snake.x += sx; // velocidades sendo atualizadas com a posição da cobra
                 snake.y += sy;
 
-                // Fazer a cobra atravessar as paredes
-                if (snake.x <0) { 
-                    snake.x = block.quantity-1;
-                }
-                if (snake.x > block.quantity-1) {
-                    snake.x = 0;
-                }
-                if (snake.y < 0) {
-                    snake.y = block.quantity-1;
-                }
-                if (snake.y > block.quantity-1) {
-                    snake.y = 0;
-                }
 
                 context.fillStyle = "black"; //atualiza a tela preta a cada frame
                 context.fillRect(0,0, stage.width, stage.height);
@@ -65,6 +52,10 @@
                     context.fillRect(snake.body[i].x * block.length, snake.body[i].y * block.length, block.length - 1, block.length - 1);
 
                     if (snake.body[i].x == snake.x && snake.body[i].y == snake.y) { //Verifica se houve colisão
+                        gameOver();
+                    }
+
+                    else if(snake.x < 0 || snake.x > block.quantity - 1 || snake.y < 0 || snake.y > block.quantity - 1){
                         gameOver();
                     }
                 }
