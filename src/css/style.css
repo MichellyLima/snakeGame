@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+html{
+	background-color: #7358C1;
+	font-family: Roboto, sans-serif;
+}
+
+header {
+	margin: 0px;
+	padding: 0px, 5px;
+	text-align: center;
+	display: block;
+}
+
+header h1, h4 {
+	color: white;
+}
+
+main{
+	margin: 0 auto;
+	padding: 0px;
+	display: flex;
+	justify-content: center;
+}
+
+main canvas {
+	position: absolute;
+	padding: 35px, 0px, 35px, 0px;
+}
+
+.pontuation {
+	margin-left: 35px;
+}
